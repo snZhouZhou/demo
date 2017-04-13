@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue-快速开始</title>
+</head>
+<body>
+{{name}}
+ <!-- 3.写上一个div -->
+ <div id="box">
+   {{'我叫'+name+'我今年'+age+'岁了,我想说'+msg}}
+   我叫{{name}},我今年{{age}}
+   <div>
+     {{msg2}}
+   </div>
+ </div>
+</body>
+</html>
+ <!-- 1.引包 -->
+  <!-- cn.vuejs.org -->
+  <!-- npm init -->
+  <!-- npm install vue save -->
+<script src="./node_modules/vue/dist/vue.js"></script>
+<script>
+  // 2.new 出一个实例/  view
+  var vm = new Vue({
+    el: '#box', // 指定的vue在dom中的作用范围
+    data:{
+      name:'小明',
+      age: 16,
+      msg: '我中国人， 我爱自己的祖国!',
+      msg2: '<h1>我中国人， 我爱自己的祖国!</h1>'
+    }
+  })
+</script>
